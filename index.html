@@ -1,10 +1,10 @@
-<!DOCTYPE html>
-<html lang="es">
+<!DOCTYPE html> 
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mundial de Clubes 2025 | Inicio</title>
-  <link rel="stylesheet" href="css/styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mundial de Clubes 2025</title>
+  <link rel="stylesheet" href="css/styles.css">
   <style>
     .tabla-calendario {
       width: 100%;
@@ -45,18 +45,14 @@
       font-weight: bold;
       margin: 0 0.5rem;
     }
-
-    h1 {
-      color: #ccc; /* ❌ contraste bajo */
-    }
   </style>
 </head>
 <body>
-  <header role="banner">
-    <h1>Mundial de Clubes 2025</h1>
-    <nav aria-label="Menú principal">
+  <header>
+    <div>Mundial de Clubes 2025</div>
+    <nav>
       <ul class="nav-menu">
-        <li><a href="#" aria-current="page">Inicio</a></li> <!-- ❌ href vacío -->
+        <li><a href="index.html">Inicio</a></li>
         <li><a href="calendario.html">Calendario</a></li>
         <li><a href="equipos.html">Equipos</a></li>
       </ul>
@@ -64,62 +60,174 @@
   </header>
 
   <main>
-    <section id="destacadas" class="noticias-destacadas" aria-labelledby="destacadas">
-      <h2 id="destacadas">Noticias Destacadas</h2> <!-- ❌ id duplicado -->
-
+    <section class="noticias-destacadas">
+      <h3>Noticias Destacadas</h3>
+      
       <article class="card-noticia">
-        <img src="assets/images/hilal-vs-city.jpg" /> <!-- ❌ sin alt -->
+        <img src="assets/images/hilal-vs-city.jpg" alt="" />
         <div>
-          <h3>Al Hilal elimina al City en un partidazo 4-3</h3>
+          <h4>Al Hilal elimina al City en un partidazo 4-3</h4>
           <p>El equipo saudí sorprendió al mundo tras vencer al Manchester City en un duelo épico por 4-3.</p>
           <a href="noticias/hilal-vs-city.html" class="boton">Leer más</a>
         </div>
       </article>
 
       <article class="card-noticia">
-        <img src="assets/images/fluminense-vs-inter.jpg" alt="Fluminense celebra" />
-        <div lang="">
-          <h3>Fluminense avanza tras vencer 2-0 al Inter</h3>
+        <img src="assets/images/fluminense-vs-inter.jpg" alt=" " />
+        <div>
+          <h4>Fluminense avanza tras vencer 2-0 al Inter</h4>
           <p>Con goles de Germán Cano y Hércules Pereira, el conjunto brasileño superó al Internacional de Porto Alegre.</p>
           <a href="noticias/fluminense-vs-inter.html" class="boton">Leer más</a>
         </div>
       </article>
 
       <article class="card-noticia">
-        <img src="assets/images/palmeiras-vs-botafogo.jpg" alt="" />
+        <img src="assets/images/palmeiras-vs-botafogo.jpg" alt="image" />
         <div>
-          <h3>Palmeiras elimina a Botafogo con lo justo</h3>
+          <h4>Palmeiras elimina a Botafogo con lo justo</h4>
           <p>Un único tanto en el segundo tiempo le bastó a Palmeiras para eliminar a Botafogo por 1-0.</p>
           <a href="noticias/palmeiras-vs-botafogo.html" class="boton">Leer más</a>
         </div>
       </article>
 
       <article class="card-noticia">
-        <img src="assets/images/psg-vs-bayern.jpg" alt="PSG y Bayern en cuartos" />
+        <img src="assets/images/psg-vs-bayern.jpg" />
         <div>
-          <h3>PSG y Bayern se enfrentan en duelo europeo clave</h3>
+          <h4>PSG y Bayern se enfrentan en duelo europeo clave</h4>
           <p>Los campeones de Francia y Alemania se verán las caras en uno de los partidos más esperados de cuartos.</p>
           <a href="noticias/psg-vs-bayern.html" class="boton">Leer más</a>
         </div>
       </article>
     </section>
 
-    <section id="video-hilal" aria-labelledby="video-hilal">
-      <h2 id="video-hilal">Vea los mejores minutos de la clasificación del Al Hilal</h2>
+    <section>
+      <h2>Vea acá los mejores minutos de la clasificación del Al Hilal</h2>
       <div class="video-container">
         <video controls>
-          <source src="assets/videos/resumen-hilal-city.mp4" type="video/mp4" />
+          <source src="assets/videos/resumen-hilal-city.mp4" type="video/mp4">
+          <p>Video resumen accesible del partido Al Hilal vs Manchester City.</p>
         </video>
-        <button></button> <!-- ❌ botón vacío sin texto -->
+        <a href="assets/videos/transcripcion-hilal-city.txt" class="boton">Leer transcripción</a>
       </div>
     </section>
 
-    <!-- Próximos partidos y tablas se mantienen iguales -->
-    <!-- ... -->
-    
-    <footer role="contentinfo" id="destacadas"> <!-- ❌ ID duplicado -->
-      <p>&copy; 2025 Mundial de Clubes. Todos los derechos reservados.</p>
-    </footer>
+    <!-- CUARTOS DE FINAL -->
+    <section>
+      <h2>Próximos encuentros</h2>
+      <h3>Cuartos de Final – 2 a 5 de julio</h3>
+      <table class="tabla-calendario">
+        <thead>
+          <tr>
+            <th>Fecha</th>
+            <th>Partido</th>
+            <th>Resultado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>05/07</td>
+            <td>
+              <div class="equipo">
+                <img src="assets/images/escudo-fluminense.png">
+                <span class="nombre-equipo">Fluminense</span>
+                <span class="vs">vs</span>
+                <img src="assets/images/escudo-alhilal.png">
+                <span class="nombre-equipo">Al Hilal</span>
+              </div>
+            </td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>05/07</td>
+            <td>
+              <div class="equipo">
+                <img src="assets/images/escudo-psg.png">
+                <span class="nombre-equipo">PSG</span>
+                <span class="vs">vs</span>
+                <img src="assets/images/escudo-bayern.png">
+                <span class="nombre-equipo">Bayern</span>
+              </div>
+            </td>
+            <td>-</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- SEMIFINALES -->
+    <section>
+      <h3>Semifinales – 8 y 9 de julio</h3>
+      <table class="tabla-calendario">
+        <thead>
+          <tr>
+            <th>Fecha</th>
+            <th>Partido</th>
+            <th>Resultado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>08/07</td>
+            <td>
+              <div class="equipo">
+                <img src="assets/images/escudo-por-definir.png">
+                <span class="nombre-equipo">Por definirse</span>
+                <span class="vs">vs</span>
+                <img src="assets/images/escudo-por-definir.png">
+                <span class="nombre-equipo">Por definirse</span>
+              </div>
+            </td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>09/07</td>
+            <td>
+              <div class="equipo">
+                <img src="assets/images/escudo-por-definir.png">
+                <span class="nombre-equipo">Por definirse</span>
+                <span class="vs">vs</span>
+                <img src="assets/images/escudo-por-definir.png">
+                <span class="nombre-equipo">Por definirse</span>
+              </div>
+            </td>
+            <td>-</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- FINAL -->
+    <section>
+      <h3>Final – 13 de julio</h3>
+      <table class="tabla-calendario">
+        <thead>
+          <tr>
+            <th>Fecha</th>
+            <th>Partido</th>
+            <th>Resultado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>13/07</td>
+            <td>
+              <div class="equipo">
+                <img src="assets/images/escudo-por-definir.png">
+                <span class="nombre-equipo">Por definirse</span>
+                <span class="vs">vs</span>
+                <img src="assets/images/escudo-por-definir.png">
+                <span class="nombre-equipo">Por definirse</span>
+              </div>
+            </td>
+            <td>-</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
   </main>
+
+  <footer>
+    <p>&copy; 2025 Mundial de Clubes. Todos los derechos reservados.</p>
+  </footer>
 </body>
 </html>
