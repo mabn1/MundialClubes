@@ -226,6 +226,7 @@ header {
 header h1 {
   margin: 0;
   font-size: 2rem;
+  color: white; /* Mejora el contraste */
 }
 .nav-menu {
   margin-top: 0.75rem;
@@ -240,4 +241,43 @@ header h1 {
 .nav-menu a:focus {
   background: rgba(255,255,255,0.2);
   outline: none;
+}
+h3.grupo-titulo {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1.3rem;
+}
+.tabla-calendario-vertical th,
+.tabla-calendario-vertical td {
+  text-align: center;
+  vertical-align: middle;
+}
+.noticias-destacadas {
+  margin-bottom: 2rem;
+}
+.card-noticia:nth-child(2) {
+  margin-bottom: 2rem;
+}
+.noticia-completa {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  max-width: 900px;
+  margin: 2rem auto;
+}
+
+.noticia-completa img {
+  display: block;
+  margin: 1rem auto;
+  max-width: 100%;
+  border-radius: 6px;
+}
+
+.noticia-completa time {
+  font-size: 0.9rem;
+  color: #666;
+  display: block;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
 }
