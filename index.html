@@ -1,53 +1,13 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mundial de Clubes 2025 | Inicio</title>
   <link rel="stylesheet" href="css/styles.css" />
-  <style>
-    .tabla-calendario {
-      width: 100%;
-      border-collapse: collapse;
-      margin-bottom: 2rem;
-    }
-
-    .tabla-calendario th, .tabla-calendario td {
-      border: 1px solid #ccc;
-      padding: 0.6rem;
-      text-align: left;
-      vertical-align: middle;
-    }
-
-    .tabla-calendario th {
-      background-color: #003366;
-      color: #fff;
-    }
-
-    .tabla-calendario img {
-      width: 48px;
-      height: 48px;
-      object-fit: contain;
-      vertical-align: middle;
-    }
-
-    .equipo {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .nombre-equipo {
-      margin: 0 0.3rem;
-    }
-
-    .vs {
-      font-weight: bold;
-      margin: 0 0.5rem;
-    }
-  </style>
 </head>
 <body>
+
   <header role="banner">
     <h1>Mundial de Clubes 2025</h1>
     <nav aria-label="Menú principal">
@@ -59,105 +19,59 @@
     </nav>
   </header>
 
-  <main>
+  <main id="contenido-principal">
     <section id="destacadas" class="noticias-destacadas" aria-labelledby="destacadas">
-      <h2>Noticias Destacadas</h2>
-      
+      <h2 id="destacadas">Noticias Destacadas</h2>
+
       <article class="card-noticia">
-        <img src="assets/images/hilal-vs-city.jpg" alt="Jugadores de Al Hilal celebrando la victoria" />
+        <img src="assets/images/hilal-vs-city.jpg" /> <!-- ❌ sin alt -->
         <div>
-          <h3>Al Hilal elimina al City en un partidazo 4-3</h3>
+          <h3 style="color: #cccccc;">Al Hilal elimina al City 4-3</h3> <!-- ❌ contraste bajo -->
           <p>El equipo saudí sorprendió al mundo tras vencer al Manchester City en un duelo épico por 4-3.</p>
-          <a href="noticias/hilal-vs-city.html" class="boton">Leer más</a>
+          <a href="noticias/hilal-vs-city.html"></a> <!-- ❌ enlace vacío -->
+          <a href="#">Leer más</a>
         </div>
       </article>
 
       <article class="card-noticia">
-        <img src="assets/images/fluminense-vs-inter.jpg" alt="Fluminense celebra el pase a semifinales" />
-        <div>
-          <h3>Fluminense avanza tras vencer 2-0 al Inter</h3>
-          <p>Con goles de Germán Cano y Hércules Pereira, el conjunto brasileño superó al Internacional de Porto Alegre.</p>
-          <a href="noticias/fluminense-vs-inter.html" class="boton">Leer más</a>
+        <img src="assets/images/fluminense-vs-inter.jpg" alt="" /> <!-- ❌ alt vacío -->
+        <div lang="">
+          <h3 id="titular">Fluminense vence 2-0 al Inter</h3>
+          <p>Con goles de Cano y Hércules, Fluminense avanzó.</p>
+          <button></button> <!-- ❌ botón sin texto -->
         </div>
       </article>
 
       <article class="card-noticia">
-        <img src="assets/images/palmeiras-vs-botafogo.jpg" alt="Palmeiras enfrenta a Botafogo" />
+        <img src="assets/images/palmeiras-vs-botafogo.jpg" />
         <div>
-          <h3>Palmeiras elimina a Botafogo con lo justo</h3>
-          <p>Un único tanto en el segundo tiempo le bastó a Palmeiras para eliminar a Botafogo por 1-0.</p>
-          <a href="noticias/palmeiras-vs-botafogo.html" class="boton">Leer más</a>
+          <h4>Palmeiras elimina a Botafogo</h4> <!-- ❌ jerarquía rota -->
+          <p>Un tanto bastó para la victoria.</p>
+          <a href="#">Leer más</a>
         </div>
       </article>
 
       <article class="card-noticia">
-        <img src="assets/images/psg-vs-bayern.jpg" alt="PSG y Bayern en partido de cuartos" />
+        <img src="assets/images/psg-vs-bayern.jpg" alt="PSG y Bayern" />
         <div>
-          <h3>PSG y Bayern se enfrentan en duelo europeo clave</h3>
-          <p>Los campeones de Francia y Alemania se verán las caras en uno de los partidos más esperados de cuartos.</p>
-          <a href="noticias/psg-vs-bayern.html" class="boton">Leer más</a>
+          <div role="button">Haz clic aquí</div> <!-- ❌ mal uso de rol -->
         </div>
       </article>
     </section>
 
     <section id="video-hilal" aria-labelledby="video-hilal">
-      <h2>Vea acá los mejores minutos de la clasificación del Al Hilal</h2>
+      <h2 id="video-hilal">Video destacado</h2>
       <div class="video-container">
-        <video controls aria-labelledby="video1-desc">
+        <video controls>
           <source src="assets/videos/resumen-hilal-city.mp4" type="video/mp4" />
-          <track src="assets/videos/subtitles-hilal-city.vtt" kind="subtitles" srclang="es" label="Español" />
-          <p id="video1-desc">Video resumen accesible del partido Al Hilal vs Manchester City.</p>
+          <track src="assets/videos/falso.vtt" kind="subtitles" srclang="es" label="Español" /> <!-- ❌ track roto -->
         </video>
-        <a href="assets/videos/transcripcion-hilal-city.txt" class="boton" download>Leer transcripción</a>
+        <a href="assets/videos/transcripcion-hilal-city.txt" download>Descargar</a>
       </div>
     </section>
 
-    <!-- CUARTOS DE FINAL -->
     <section>
-      <h2>Próximos encuentros</h2>
-      <h3>Cuartos de Final – 2 a 5 de julio</h3>
-      <table class="tabla-calendario">
-        <thead>
-          <tr>
-            <th>Fecha</th>
-            <th>Partido</th>
-            <th>Resultado</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>05/07</td>
-            <td>
-              <div class="equipo">
-                <img src="assets/images/escudo-fluminense.png" alt="Fluminense" />
-                <span class="nombre-equipo">Fluminense</span>
-                <span class="vs">vs</span>
-                <img src="assets/images/escudo-alhilal.png" alt="Al Hilal" />
-                <span class="nombre-equipo">Al Hilal</span>
-              </div>
-            </td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td>05/07</td>
-            <td>
-              <div class="equipo">
-                <img src="assets/images/escudo-psg.png" alt="PSG" />
-                <span class="nombre-equipo">PSG</span>
-                <span class="vs">vs</span>
-                <img src="assets/images/escudo-bayern.png" alt="Bayern" />
-                <span class="nombre-equipo">Bayern</span>
-              </div>
-            </td>
-            <td>-</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-
-    <!-- SEMIFINALES -->
-    <section>
-      <h3>Semifinales – 8 y 9 de julio</h3>
+      <h4>Semifinales</h4> <!-- ❌ otro h4 sin jerarquía -->
       <table class="tabla-calendario">
         <thead>
           <tr>
@@ -171,53 +85,11 @@
             <td>08/07</td>
             <td>
               <div class="equipo">
-                <img src="assets/images/escudo-por-definir.png" alt="Equipo por definir" />
-                <span class="nombre-equipo">Por definirse</span>
-                <span class="vs">vs</span>
-                <img src="assets/images/escudo-por-definir.png" alt="Equipo por definir" />
-                <span class="nombre-equipo">Por definirse</span>
-              </div>
-            </td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td>09/07</td>
-            <td>
-              <div class="equipo">
-                <img src="assets/images/escudo-por-definir.png" alt="Equipo por definir" />
-                <span class="nombre-equipo">Por definirse</span>
-                <span class="vs">vs</span>
-                <img src="assets/images/escudo-por-definir.png" alt="Equipo por definir" />
-                <span class="nombre-equipo">Por definirse</span>
-              </div>
-            </td>
-            <td>-</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-
-    <!-- FINAL -->
-    <section>
-      <h3>Final – 13 de julio</h3>
-      <table class="tabla-calendario">
-        <thead>
-          <tr>
-            <th>Fecha</th>
-            <th>Partido</th>
-            <th>Resultado</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>13/07</td>
-            <td>
-              <div class="equipo">
-                <img src="assets/images/escudo-por-definir.png" alt="Equipo por definir" />
-                <span class="nombre-equipo">Por definirse</span>
-                <span class="vs">vs</span>
-                <img src="assets/images/escudo-por-definir.png" alt="Equipo por definir" />
-                <span class="nombre-equipo">Por definirse</span>
+                <img src="assets/images/escudo-por-definir.png" />
+                <span>Por definirse</span>
+                <span>vs</span>
+                <img src="assets/images/escudo-por-definir.png" />
+                <span>Por definirse</span>
               </div>
             </td>
             <td>-</td>
@@ -227,8 +99,9 @@
     </section>
   </main>
 
-  <footer role="contentinfo">
-    <p>&copy; 2025 Mundial de Clubes. Todos los derechos reservados.</p>
+  <footer role="contentinfo" id="footer" id="footer"> <!-- ❌ ID duplicado -->
+    <p>&copy; 2025 Mundial de Clubes.</p>
   </footer>
+
 </body>
 </html>
