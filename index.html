@@ -1,39 +1,80 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mundial de Clubes 2025 | Inicio</title>
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mundial de Clubes 2025 | Inicio</title>
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-    <header role="banner">
-        <h1>Mundial de Clubes 2025</h1>
-        <nav aria-label="Menú principal">
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="noticias.html">Noticias</a></li>
-                <li><a href="calendario.html">Calendario</a></li>
-                <li><a href="equipos.html">Equipos</a></li>
-                <li><a href="videos.html">Videos</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header role="banner">
+    <h1>Mundial de Clubes 2025</h1>
+    <nav aria-label="Menú principal">
+      <ul class="nav-menu">
+        <li><a href="index.html" aria-current="page">Inicio</a></li>
+        <li><a href="calendario.html">Calendario</a></li>
+        <li><a href="equipos.html">Equipos</a></li>
+        <li><a href="videos.html">Videos</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main role="main">
-        <section aria-labelledby="destacadas">
-            <h2 id="destacadas">Noticias Destacadas</h2>
-            <article>
-                <h3>Real Madrid vs. Al Hilal: Resumen del partido</h3>
-                <img src="assets/images/madrid-hilal.jpg" alt="Jugador del Real Madrid celebrando un gol">
-                <p>El Real Madrid avanza a la final tras vencer 3-1 al Al Hilal...</p>
-                <a href="noticias.html#madrid-hilal">Leer más</a>
-            </article>
-        </section>
-    </main>
+  <main>
+    <section aria-labelledby="destacadas">
+      <h2 id="destacadas">Noticias Destacadas</h2>
 
-    <footer role="contentinfo">
-        <p>&copy; 2025 Mundial de Clubes. Todos los derechos reservados.</p>
-    </footer>
+      <article class="card-noticia">
+        <img src="assets/images/hilal-vs-city.jpg" alt="Jugadores de Al Hilal celebrando la victoria" />
+        <div>
+          <h3>Al Hilal elimina al City en un partidazo 4-3</h3>
+          <p>El equipo saudí sorprendió al mundo tras vencer al Manchester City en un duelo épico por 4-3.</p>
+          <a href="noticias/hilal-vs-city.html" class="boton">Leer más</a>
+        </div>
+      </article>
+
+      <article class="card-noticia">
+        <img src="assets/images/fluminense-vs-inter.jpg" alt="Fluminense celebra el pase a semifinales" />
+        <div>
+          <h3>Fluminense avanza tras vencer 2-0 al Inter</h3>
+          <p>Con goles de Germán Cano y Hércules Pereira, el conjunto brasileño superó al Internacional de Porto Alegre.</p>
+          <a href="noticias/fluminense-vs-inter.html" class="boton">Leer más</a>
+        </div>
+      </article>
+
+      <article class="card-noticia">
+        <img src="assets/images/palmeiras-vs-botafogo.jpg" alt="Palmeiras enfrenta a Botafogo" />
+        <div>
+          <h3>Palmeiras elimina a Botafogo con lo justo</h3>
+          <p>Un unico tanto en el segundo tiempo le bastó a Palmeiras para eliminar a Botafogo por 1-0.</p>
+          <a href="noticias/palmeiras-vs-botafogo.html" class="boton">Leer más</a>
+        </div>
+      </article>
+
+      <article class="card-noticia">
+        <img src="assets/images/psg-vs-bayern.jpg" alt="PSG y Bayern en partido de cuartos" />
+        <div>
+          <h3>PSG y Bayern se enfrentan en duelo europeo clave</h3>
+          <p>Los campeones de Francia y Alemania se verán las caras en uno de los partidos más esperados de cuartos.</p>
+          <a href="noticias/psg-vs-bayern.html" class="boton">Leer más</a>
+        </div>
+      </article>
+    </section>
+
+    <section aria-labelledby="video-hilal">
+      <h2 id="video-hilal">Vea acá los mejores minutos de la clasificación del Al Hilal</h2>
+      <div class="video-container">
+        <video controls aria-labelledby="video1-desc">
+          <source src="assets/videos/resumen-hilal-city.mp4" type="video/mp4" />
+          <track src="assets/videos/subtitles-hilal-city.vtt" kind="subtitles" srclang="es" label="Español" />
+          <p id="video1-desc">Video resumen accesible del partido Al Hilal vs Manchester City.</p>
+        </video>
+        <a href="assets/videos/transcripcion-hilal-city.txt" class="boton" download>Leer transcripción</a>
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <p>&copy; 2025 Mundial de Clubes. Todos los derechos reservados.</p>
+  </footer>
 </body>
 </html>
