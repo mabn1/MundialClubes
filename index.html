@@ -1,60 +1,79 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mundial de Clubes | Simulador</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mundial de Clubes 2025 | Inicio</title>
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-    <header class="bg-dark text-white p-3 text-center">
-        <h1>Mundial de Clubes Históricos</h1>
-    </header>
+  <header role="banner">
+    <h1>Mundial de Clubes 2025</h1>
+    <nav aria-label="Menú principal">
+      <ul class="nav-menu">
+        <li><a href="index.html" aria-current="page">Inicio</a></li>
+        <li><a href="calendario.html">Calendario</a></li>
+        <li><a href="equipos.html">Equipos</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main class="container my-5">
-        <section id="filtros" class="mb-4">
-            <select id="filtroEquipo" class="form-select">
-                <option value="todos">Todos los equipos</option>
-                <option value="barcelona">Barcelona</option>
-                <option value="real-madrid">Real Madrid</option>
-                <option value="bayern">Bayern Múnich</option>
-            </select>
-        </section>
-
-        <section id="calendario">
-            <h2 class="mb-3">Calendario de Partidos</h2>
-            <div class="partido" data-equipo="barcelona real-madrid" data-ganador="barcelona">
-                <span>Barcelona 2 - 1 Real Madrid</span>
-                <button class="btn btn-sm btn-info" onclick="mostrarEstadisticas('barcelona', 'real-madrid')">Estadísticas</button>
-            </div>
-            <div class="partido" data-equipo="bayern real-madrid">
-                <span>Bayern Múnich vs Real Madrid (15/08/2024)</span>
-                <button class="btn btn-sm btn-primary" onclick="simularPartido('bayern', 'real-madrid', this)">Simular</button>
-            </div>
-            <!-- Más partidos aquí -->
-        </section>
-    </main>
-
-    <!-- Modal de Estadísticas (Bootstrap) -->
-    <div class="modal fade" id="estadisticasModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Estadísticas del Partido</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-                </div>
-                <div class="modal-body">
-                    <div id="cuerpoEstadisticas"></div>
-                    <canvas id="miGrafico"></canvas>
-                </div>
-            </div>
+  <main>
+    <section id="destacadas" class="noticias-destacadas" aria-labelledby="destacadas">
+      <h2>Noticias Destacadas</h2>
+      
+      <article class="card-noticia">
+        <img src="assets/images/hilal-vs-city.jpg" alt="Jugadores de Al Hilal celebrando la victoria" />
+        <div>
+          <h3>Al Hilal elimina al City en un partidazo 4-3</h3>
+          <p>El equipo saudí sorprendió al mundo tras vencer al Manchester City en un duelo épico por 4-3.</p>
+          <a href="noticias/hilal-vs-city.html" class="boton">Leer más</a>
         </div>
-    </div>
+      </article>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="js/app.js"></script>
+      <article class="card-noticia">
+        <img src="assets/images/fluminense-vs-inter.jpg" alt="Fluminense celebra el pase a semifinales" />
+        <div>
+          <h3>Fluminense avanza tras vencer 2-0 al Inter</h3>
+          <p>Con goles de Germán Cano y Hércules Pereira, el conjunto brasileño superó al Internacional de Porto Alegre.</p>
+          <a href="noticias/fluminense-vs-inter.html" class="boton">Leer más</a>
+        </div>
+      </article>
+
+      <article class="card-noticia">
+        <img src="assets/images/palmeiras-vs-botafogo.jpg" alt="Palmeiras enfrenta a Botafogo" />
+        <div>
+          <h3>Palmeiras elimina a Botafogo con lo justo</h3>
+          <p>Un único tanto en el segundo tiempo le bastó a Palmeiras para eliminar a Botafogo por 1-0.</p>
+          <a href="noticias/palmeiras-vs-botafogo.html" class="boton">Leer más</a>
+        </div>
+      </article>
+
+      <article class="card-noticia">
+        <img src="assets/images/psg-vs-bayern.jpg" alt="PSG y Bayern en partido de cuartos" />
+        <div>
+          <h3>PSG y Bayern se enfrentan en duelo europeo clave</h3>
+          <p>Los campeones de Francia y Alemania se verán las caras en uno de los partidos más esperados de cuartos.</p>
+          <a href="noticias/psg-vs-bayern.html" class="boton">Leer más</a>
+        </div>
+      </article>
+    </section>
+
+    <section id="video-hilal" aria-labelledby="video-hilal">
+      <h2>Vea acá los mejores minutos de la clasificación del Al Hilal</h2>
+      <div class="video-container">
+        <video controls aria-labelledby="video1-desc">
+          <source src="assets/videos/resumen-hilal-city.mp4" type="video/mp4" />
+          <track src="assets/videos/subtitles-hilal-city.vtt" kind="subtitles" srclang="es" label="Español" />
+          <p id="video1-desc">Video resumen accesible del partido Al Hilal vs Manchester City.</p>
+        </video>
+        <a href="assets/videos/transcripcion-hilal-city.txt" class="boton" download>Leer transcripción</a>
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <p>&copy; 2025 Mundial de Clubes. Todos los derechos reservados.</p>
+  </footer>
 </body>
 </html>
