@@ -1,22 +1,292 @@
-<section aria-labelledby="calendario">
-    <h2 id="calendario">Calendario de Partidos</h2>
-    <table>
-        <caption>Fase de Grupos - Mundial de Clubes 2025</caption>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calendario | Mundial de Clubes 2025</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .tabla-calendario {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 2rem;
+    }
+
+    .tabla-calendario th, .tabla-calendario td {
+      border: 1px solid #ccc;
+      padding: 0.6rem;
+      text-align: left;
+      vertical-align: middle;
+    }
+
+    .tabla-calendario th {
+      background-color: #003366;
+      color: #fff;
+    }
+
+    .tabla-calendario img {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+      vertical-align: middle;
+    }
+
+    .equipo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <header role="banner">
+    <h1>Mundial de Clubes 2025</h1>
+    <nav aria-label="Menú principal">
+      <ul class="nav-menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="calendario.html" aria-current="page">Calendario</a></li>
+        <li><a href="equipos.html">Equipos</a></li>
+        <li><a href="videos.html">Videos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Calendario completo de partidos</h2>
+
+    <!-- FASE DE GRUPOS -->
+    <section>
+      <h3>Fase de Grupos – Jornadas 1 a 3 (14–26 de junio)</h3>
+      <table class="tabla-calendario">
         <thead>
-            <tr>
-                <th scope="col">Fecha</th>
-                <th scope="col">Equipo Local</th>
-                <th scope="col">Resultado</th>
-                <th scope="col">Equipo Visitante</th>
-            </tr>
+          <tr>
+            <th>Fecha</th>
+            <th>Partido</th>
+            <th>Resultado</th>
+          </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>12/02/2025</td>
-                <td>Real Madrid</td>
-                <td>2-0</td>
-                <td>Al Ahly</td>
-            </tr>
+          <!-- Generado automáticamente -->
+          <!-- Muestra parcial para ejemplo -->
+          <tr>
+            <td>14/06</td>
+            <td>
+              <div class="equipo">
+                <img src="assets/images/escudo-al-ahly.png" alt="Al Ahly" />
+                Al Ahly
+                <span style="margin: 0 5px;">vs</span>
+                <img src="assets/images/escudo-inter-miami.png" alt="Inter Miami" />
+                Inter Miami
+              </div>
+            </td>
+            <td>0 - 0</td>
+          </tr>
+          <tr>
+            <td>15/06</td>
+            <td>
+              <div class="equipo">
+                <img src="assets/images/escudo-bayern.png" alt="Bayern Múnich" />
+                Bayern
+                <span style="margin: 0 5px;">vs</span>
+                <img src="assets/images/escudo-auckland.png" alt="Auckland City" />
+                Auckland City
+              </div>
+            </td>
+            <td>10 - 0</td>
+          </tr>
+          <tr>
+            <td>15/06</td>
+            <td>
+              <div class="equipo">
+                <img src="assets/images/escudo-psg.png" alt="Paris Saint-Germain" />
+                PSG
+                <span style="margin: 0 5px;">vs</span>
+                <img src="assets/images/escudo-atletico.png" alt="Atlético de Madrid" />
+                Atlético Madrid
+              </div>
+            </td>
+            <td>4 - 0</td>
+          </tr>
+
+          <!-- ... continúa hasta completar todos los partidos fase de grupos -->
+
+          <tr>
+            <td>26/06</td>
+            <td>
+              <div class="equipo">
+                <img src="assets/images/escudo-alhilal.png" alt="Al Hilal" />
+                Al Hilal
+                <span style="margin: 0 5px;">vs</span>
+                <img src="assets/images/escudo-pachuca.png" alt="Pachuca" />
+                Pachuca
+              </div>
+            </td>
+            <td>2 - 0</td>
+          </tr>
         </tbody>
-    </table>
-</section>
+      </table>
+    </section>
+
+    <!-- OCTAVOS DE FINAL -->
+    <section>
+      <h3>Octavos de Final – 28 a 30 de junio</h3>
+      <table class="tabla-calendario">
+        <thead>
+          <tr>
+            <th>Fecha</th>
+            <th>Partido</th>
+            <th>Resultado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>28/06</td>
+            <td>
+              <div class="equipo">
+                <img src="assets/images/escudo-palmeiras.png" alt="Palmeiras" />
+                Palmeiras
+                <span>vs</span>
+                <img src="assets/images/escudo-botafogo.png" alt="Botafogo" />
+                Botafogo
+              </div>
+            </td>
+            <td>1 - 0</td>
+          </tr>
+          <tr>
+            <td>30/06</td>
+            <td>
+              <div class="equipo">
+                <img src="assets/images/escudo-manchester-city.png" alt="Manchester City" />
+                Manchester City
+                <span>vs</span>
+                <img src="assets/images/escudo-alhilal.png" alt="Al Hilal" />
+                Al Hilal
+              </div>
+            </td>
+            <td>3 - 4</td>
+          </tr>
+
+          <!-- ...otros partidos de octavos -->
+        </tbody>
+      </table>
+    </section>
+
+    <!-- CUARTOS DE FINAL -->
+    <section>
+      <h3>Cuartos de Final – 2 a 5 de julio</h3>
+      <table class="tabla-calendario">
+        <thead>
+          <tr>
+            <th>Fecha</th>
+            <th>Partido</th>
+            <th>Resultado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>02/07</td>
+            <td>
+              <div class="equipo">
+                <img src="assets/images/escudo-fluminense.png" alt="Fluminense" />
+                Fluminense
+                <span>vs</span>
+                <img src="assets/images/escudo-alhilal.png" alt="Al Hilal" />
+                Al Hilal
+              </div>
+            </td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>05/07</td>
+            <td>
+              <div class="equipo">
+                <img src="assets/images/escudo-psg.png" alt="PSG" />
+                PSG
+                <span>vs</span>
+                <img src="assets/images/escudo-bayern.png" alt="Bayern" />
+                Bayern
+              </div>
+            </td>
+            <td>-</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- SEMIFINALES -->
+    <section>
+      <h3>Semifinales – 8 y 9 de julio</h3>
+      <table class="tabla-calendario">
+        <thead>
+          <tr>
+            <th>Fecha</th>
+            <th>Partido</th>
+            <th>Resultado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>08/07</td>
+            <td>
+              <div class="equipo">
+                <img src="assets/images/escudo-por-definir.png" alt="Equipo por definir" />
+                Por definirse
+                <span>vs</span>
+                <img src="assets/images/escudo-por-definir.png" alt="Equipo por definir" />
+                Por definirse
+              </div>
+            </td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>09/07</td>
+            <td>
+              <div class="equipo">
+                <img src="assets/images/escudo-por-definir.png" alt="Equipo por definir" />
+                Por definirse
+                <span>vs</span>
+                <img src="assets/images/escudo-por-definir.png" alt="Equipo por definir" />
+                Por definirse
+              </div>
+            </td>
+            <td>-</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- FINAL -->
+    <section>
+      <h3>Final – 13 de julio</h3>
+      <table class="tabla-calendario">
+        <thead>
+          <tr>
+            <th>Fecha</th>
+            <th>Partido</th>
+            <th>Resultado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>13/07</td>
+            <td>
+              <div class="equipo">
+                <img src="assets/images/escudo-por-definir.png" alt="Equipo por definir" />
+                Por definirse
+                <span>vs</span>
+                <img src="assets/images/escudo-por-definir.png" alt="Equipo por definir" />
+                Por definirse
+              </div>
+            </td>
+            <td>-</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <p>&copy; 2025 Mundial de Clubes. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
