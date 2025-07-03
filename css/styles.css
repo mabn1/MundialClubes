@@ -282,3 +282,7 @@ h3.grupo-titulo {
   margin-top: 0.5rem;
   margin-bottom: 1rem;
 }
+.noticias-destacadas h2 {
+  margin-bottom: 1.5rem; /* Espacio entre el título y las cards */
+  grid-column: 1 / -1; /* Obliga al h2 a ocupar todo el ancho en modo grid */
+}
