@@ -1,10 +1,10 @@
-<!DOCTYPE html> 
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mundial de Clubes 2025</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mundial de Clubes 2025 | Inicio</title>
+  <link rel="stylesheet" href="css/styles.css" />
   <style>
     .tabla-calendario {
       width: 100%;
@@ -20,7 +20,7 @@
     }
 
     .tabla-calendario th {
-      background-color: #003366;
+      background-color: #004080; /* Cambiado a azul más claro para mejor contraste */
       color: #fff;
     }
 
@@ -45,14 +45,20 @@
       font-weight: bold;
       margin: 0 0.5rem;
     }
+    
+    /* Estilo para foco visible */
+    a:focus, button:focus {
+      outline: 2px solid #0056b3;
+      outline-offset: 2px;
+    }
   </style>
 </head>
 <body>
-  <header>
-    <div>Mundial de Clubes 2025</div>
-    <nav>
+  <header role="banner">
+    <h1>Mundial de Clubes 2025</h1>
+    <nav aria-label="Menú principal">
       <ul class="nav-menu">
-        <li><a href="index.html">Inicio</a></li>
+        <li><a href="index.html" aria-current="page">Inicio</a></li>
         <li><a href="calendario.html">Calendario</a></li>
         <li><a href="equipos.html">Equipos</a></li>
       </ul>
@@ -60,67 +66,68 @@
   </header>
 
   <main>
-    <section class="noticias-destacadas">
-      <h3>Noticias Destacadas</h3>
+    <section id="destacadas" class="noticias-destacadas" aria-labelledby="destacadas">
+      <h2>Noticias Destacadas</h2>
       
       <article class="card-noticia">
-        <img src="assets/images/hilal-vs-city.jpg" alt="" />
+        <img src="assets/images/hilal-vs-city.jpg" alt="Jugadores de Al Hilal celebrando la victoria" />
         <div>
-          <h4>Al Hilal elimina al City en un partidazo 4-3</h4>
+          <h3>Al Hilal elimina al City en un partidazo 4-3</h3>
           <p>El equipo saudí sorprendió al mundo tras vencer al Manchester City en un duelo épico por 4-3.</p>
-          <a href="noticias/hilal-vs-city.html" class="boton">Leer más</a>
+          <a href="noticias/hilal-vs-city.html" class="boton">Leer más <span class="sr-only">sobre Al Hilal vs Manchester City</span></a>
         </div>
       </article>
 
       <article class="card-noticia">
-        <img src="assets/images/fluminense-vs-inter.jpg" alt=" " />
+        <img src="assets/images/fluminense-vs-inter.jpg" alt="Fluminense celebra el pase a semifinales" />
         <div>
-          <h4>Fluminense avanza tras vencer 2-0 al Inter</h4>
+          <h3>Fluminense avanza tras vencer 2-0 al Inter</h3>
           <p>Con goles de Germán Cano y Hércules Pereira, el conjunto brasileño superó al Internacional de Porto Alegre.</p>
-          <a href="noticias/fluminense-vs-inter.html" class="boton">Leer más</a>
+          <a href="noticias/fluminense-vs-inter.html" class="boton">Leer más <span class="sr-only">sobre Fluminense vs Internacional</span></a>
         </div>
       </article>
 
       <article class="card-noticia">
-        <img src="assets/images/palmeiras-vs-botafogo.jpg" alt="image" />
+        <img src="assets/images/palmeiras-vs-botafogo.jpg" alt="Palmeiras enfrenta a Botafogo" />
         <div>
-          <h4>Palmeiras elimina a Botafogo con lo justo</h4>
+          <h3>Palmeiras elimina a Botafogo con lo justo</h3>
           <p>Un único tanto en el segundo tiempo le bastó a Palmeiras para eliminar a Botafogo por 1-0.</p>
-          <a href="noticias/palmeiras-vs-botafogo.html" class="boton">Leer más</a>
+          <a href="noticias/palmeiras-vs-botafogo.html" class="boton">Leer más <span class="sr-only">sobre Palmeiras vs Botafogo</span></a>
         </div>
       </article>
 
       <article class="card-noticia">
-        <img src="assets/images/psg-vs-bayern.jpg" />
+        <img src="assets/images/psg-vs-bayern.jpg" alt="PSG y Bayern en partido de cuartos definirá que equipo europeo destacará para llegar a las semifinales" />
         <div>
-          <h4>PSG y Bayern se enfrentan en duelo europeo clave</h4>
+          <h3>PSG y Bayern se enfrentan en duelo europeo clave</h3>
           <p>Los campeones de Francia y Alemania se verán las caras en uno de los partidos más esperados de cuartos.</p>
-          <a href="noticias/psg-vs-bayern.html" class="boton">Leer más</a>
+          <a href="noticias/psg-vs-bayern.html" class="boton">Leer más <span class="sr-only">sobre PSG vs Bayern Munich</span></a>
         </div>
       </article>
     </section>
 
-    <section>
+    <section id="video-hilal" aria-labelledby="video-hilal">
       <h2>Vea acá los mejores minutos de la clasificación del Al Hilal</h2>
       <div class="video-container">
-        <video controls>
-          <source src="assets/videos/resumen-hilal-city.mp4" type="video/mp4">
-          <p>Video resumen accesible del partido Al Hilal vs Manchester City.</p>
+        <video controls aria-labelledby="video1-desc">
+          <source src="assets/videos/resumen-hilal-city.mp4" type="video/mp4" />
+          <track src="assets/videos/subtitles-hilal-city.vtt" kind="subtitles" srclang="es" label="Español" default />
+          <p id="video1-desc">Video resumen accesible del partido Al Hilal vs Manchester City.</p>
         </video>
-        <a href="assets/videos/transcripcion-hilal-city.txt" class="boton">Leer transcripción</a>
+        <a href="assets/videos/transcripcion-hilal-city.txt" class="boton" download="transcripcion-hilal-city">Descargar transcripción <span class="sr-only">del partido Al Hilal vs Manchester City</span></a>
       </div>
     </section>
 
     <!-- CUARTOS DE FINAL -->
-    <section>
-      <h2>Próximos encuentros</h2>
+    <section aria-labelledby="cuartos-titulo">
+      <h2 id="cuartos-titulo">Próximos encuentros</h2>
       <h3>Cuartos de Final – 2 a 5 de julio</h3>
-      <table class="tabla-calendario">
+      <table class="tabla-calendario" summary="Calendario de partidos de cuartos de final">
         <thead>
           <tr>
-            <th>Fecha</th>
-            <th>Partido</th>
-            <th>Resultado</th>
+            <th scope="col">Fecha</th>
+            <th scope="col">Partido</th>
+            <th scope="col">Resultado</th>
           </tr>
         </thead>
         <tbody>
@@ -128,10 +135,10 @@
             <td>05/07</td>
             <td>
               <div class="equipo">
-                <img src="assets/images/escudo-fluminense.png">
+                <img src="assets/images/escudo-fluminense.png" alt="Fluminense" />
                 <span class="nombre-equipo">Fluminense</span>
-                <span class="vs">vs</span>
-                <img src="assets/images/escudo-alhilal.png">
+                <span class="vs" aria-hidden="true">vs</span>
+                <img src="assets/images/escudo-alhilal.png" alt="Al Hilal" />
                 <span class="nombre-equipo">Al Hilal</span>
               </div>
             </td>
@@ -141,10 +148,10 @@
             <td>05/07</td>
             <td>
               <div class="equipo">
-                <img src="assets/images/escudo-psg.png">
+                <img src="assets/images/escudo-psg.png" alt="Paris Saint-Germain" />
                 <span class="nombre-equipo">PSG</span>
-                <span class="vs">vs</span>
-                <img src="assets/images/escudo-bayern.png">
+                <span class="vs" aria-hidden="true">vs</span>
+                <img src="assets/images/escudo-bayern.png" alt="Bayern Munich" />
                 <span class="nombre-equipo">Bayern</span>
               </div>
             </td>
@@ -155,14 +162,14 @@
     </section>
 
     <!-- SEMIFINALES -->
-    <section>
-      <h3>Semifinales – 8 y 9 de julio</h3>
-      <table class="tabla-calendario">
+    <section aria-labelledby="semifinales-titulo">
+      <h3 id="semifinales-titulo">Semifinales – 8 y 9 de julio</h3>
+      <table class="tabla-calendario" summary="Calendario de partidos de semifinales">
         <thead>
           <tr>
-            <th>Fecha</th>
-            <th>Partido</th>
-            <th>Resultado</th>
+            <th scope="col">Fecha</th>
+            <th scope="col">Partido</th>
+            <th scope="col">Resultado</th>
           </tr>
         </thead>
         <tbody>
@@ -170,10 +177,10 @@
             <td>08/07</td>
             <td>
               <div class="equipo">
-                <img src="assets/images/escudo-por-definir.png">
+                <img src="assets/images/escudo-por-definir.png" alt="" aria-hidden="true" />
                 <span class="nombre-equipo">Por definirse</span>
-                <span class="vs">vs</span>
-                <img src="assets/images/escudo-por-definir.png">
+                <span class="vs" aria-hidden="true">vs</span>
+                <img src="assets/images/escudo-por-definir.png" alt="" aria-hidden="true" />
                 <span class="nombre-equipo">Por definirse</span>
               </div>
             </td>
@@ -183,10 +190,10 @@
             <td>09/07</td>
             <td>
               <div class="equipo">
-                <img src="assets/images/escudo-por-definir.png">
+                <img src="assets/images/escudo-por-definir.png" alt="" aria-hidden="true" />
                 <span class="nombre-equipo">Por definirse</span>
-                <span class="vs">vs</span>
-                <img src="assets/images/escudo-por-definir.png">
+                <span class="vs" aria-hidden="true">vs</span>
+                <img src="assets/images/escudo-por-definir.png" alt="" aria-hidden="true" />
                 <span class="nombre-equipo">Por definirse</span>
               </div>
             </td>
@@ -197,14 +204,14 @@
     </section>
 
     <!-- FINAL -->
-    <section>
-      <h3>Final – 13 de julio</h3>
-      <table class="tabla-calendario">
+    <section aria-labelledby="final-titulo">
+      <h3 id="final-titulo">Final – 13 de julio</h3>
+      <table class="tabla-calendario" summary="Calendario de partido final">
         <thead>
           <tr>
-            <th>Fecha</th>
-            <th>Partido</th>
-            <th>Resultado</th>
+            <th scope="col">Fecha</th>
+            <th scope="col">Partido</th>
+            <th scope="col">Resultado</th>
           </tr>
         </thead>
         <tbody>
@@ -212,10 +219,10 @@
             <td>13/07</td>
             <td>
               <div class="equipo">
-                <img src="assets/images/escudo-por-definir.png">
+                <img src="assets/images/escudo-por-definir.png" alt="" aria-hidden="true" />
                 <span class="nombre-equipo">Por definirse</span>
-                <span class="vs">vs</span>
-                <img src="assets/images/escudo-por-definir.png">
+                <span class="vs" aria-hidden="true">vs</span>
+                <img src="assets/images/escudo-por-definir.png" alt="" aria-hidden="true" />
                 <span class="nombre-equipo">Por definirse</span>
               </div>
             </td>
@@ -226,8 +233,9 @@
     </section>
   </main>
 
-  <footer>
+  <footer role="contentinfo">
     <p>&copy; 2025 Mundial de Clubes. Todos los derechos reservados.</p>
+    <a href="accesibilidad.html" class="enlace-accesibilidad">Declaración de accesibilidad</a>
   </footer>
 </body>
 </html>
