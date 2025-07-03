@@ -124,3 +124,24 @@ footer {
     flex: 1 1 60%;
   }
 }
+
+grid-equipos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.grid-equipos figure {
+  text-align: center;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.grid-equipos figcaption {
+  margin-top: 0.5rem;
+  font-weight: bold;
+  font-size: 0.95rem;
+}
